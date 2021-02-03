@@ -1,0 +1,46 @@
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-size: 16px;
+  font-family: "Ubuntu", "Arial", sans-serif;
+  color: $font-white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
