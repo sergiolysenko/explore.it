@@ -1,0 +1,125 @@
+//While main screen is open//
+.city {
+  position: relative;
+  transform: translateX(100%);
+  transition: all 1s;
+
+  &__wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  &__link {
+    position: relative;
+    overflow: hidden;
+    height:100%;
+    width: 270px;
+    margin-left: -2px;
+    padding: 0;
+    border: none;
+    transform: skew(-15deg);
+    transition: all 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      width: 300px;
+      margin-left: -60px;
+    }
+
+    &:focus {
+      width: 300px;
+      margin-left: -60px;
+      outline: none;
+    }
+
+  }
+
+  &__picture-wrapper::before {
+    content: '';
+    position: absolute;
+    display: block;
+    background: linear-gradient(20deg, #000000 0%, rgba(0, 0, 0, 0) 45.07%);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  &__picture {
+    width: auto;
+    max-width: 700px;
+    height: 100vh;
+    margin-left: -90px;
+    display: block;
+    object-fit: cover;
+    transform: skew(15deg);
+    filter: grayscale(80%);
+    transition: all 0.5s ease;
+  }
+
+  &__link:hover &__picture {
+    filter: grayscale(0);
+    margin-left: -100px;
+  }
+
+  &__text {
+    width: 200px;
+    color: #ffffff;
+    padding: 0 20px;
+    position: absolute;
+    top: 80%;
+    z-index: 2;
+  }
+
+  //  Button explore  //
+
+  &__explore-link {
+    display: block;
+    position: absolute;
+    padding: 5px;
+    top: 44%;
+    left: 50%;
+    color: $font-white;
+    font-family: inherit;
+    font-size: 20px;
+    transform: skew(15deg);
+    opacity: 0;
+    transition: all 0.5s;
+  }
+}
+//After main screen is hidden//
+.hidden .city {
+  transform: translateX(0);
+}
+
+//Styles after click on a city //
+
+.city__link--active {
+  width: 400px;
+
+  &:hover {
+    width: 400px;
+    margin-left: 0;
+  }
+
+  &:focus {
+    width: 400px;
+    margin-left: 0;
+  }
+
+  .city__picture {
+    filter: grayscale(0);
+    margin-left: -150px;
+  }
+
+  .city__explore-link {
+    z-index: 5;
+    margin-left: -7%;
+    opacity: 1;
+
+    &:hover {
+      background-color: #000000;
+    }
+  }
+}

@@ -4,10 +4,109 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <div>
-    asdawdawd
-  </div>
+  <header class="page-header">
+    <div class="page-header__logo-container">
+      <a class="page-header__logo">
+        <picture>
+          <!-- <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="page-header__image-logo" src="img/logo-mobile.svg" width="255" height="65" alt="Интернет магазин Cat-Energy"> -->
+        </picture>
+      </a>
+    </div>
+  </header>
+  <main class="main">
+    <section class="top">
+      <button class="top__welcome-btn">
+        <svg class="top__svg-fill" width="690" height="205" viewBox="0 0 690 205" fill="#2c2926" xmlns="http://www.w3.org/2000/svg">
+        <path d="M27.7344 205H0.734375V0.25H27.7344V205ZM214.484 22.4688H148.672V205H121.812V22.4688H56.1406V0.25H214.484V22.4688ZM346.672 151.562H260.891L241.625 205H213.781L291.969 0.25H315.594L393.922 205H366.219L346.672 151.562ZM269.047 129.344H338.656L303.781 33.5781L269.047 129.344ZM448.625 182.922H545.656V205H421.484V0.25H448.625V182.922ZM605.141 103.047L658.578 0.25H689.234L618.641 128.641V205H591.641V128.641L521.047 0.25H551.984L605.141 103.047Z" fill="#2c2926"/>
+        </svg>
+        <svg class="top__svg-stroke" width="650" height="205" viewBox="0 0 690 205" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="svg-italy__i" d="M28 1.5H1V206H28V1.5Z" stroke="black"/>
+        <path class="svg-italy__t" d="M122 24V206H148.5V23.5H149H214.5V1.5H56V24H57H122Z" stroke="black"/>
+        <path class="svg-italy__a" d="M214.5 206L291.5 1.5L292 1H315.5L394 206H366L346.5 152.5H261L241.5 206H214.5Z" stroke="black"/>
+        <path d="M421.5 1V206H545.5V184H448.5V1H421.5Z" stroke="black"/>
+        <path d="M591.5 129.5V206H618.5V130L689.5 1H658.5L605 104L552 1H521L591.5 129.5Z" stroke="black"/>
+        <path d="M338.5 129.5H269L304 34L338.5 129.5Z" stroke="black"/>
+        </svg>
+
+      </button>
+      <img class="top__img-bg" src="./img/top-background.png" alt="italy toscana">
+    </section>
+    <section class="city city__rome">
+      <div class="city__wrapper">
+        <button href="#" class="city__link">
+          <div class="city__picture-wrapper">
+            <img class="city__picture" src="./img/florence/florence-big.jpg" alt="city rome" width=" 1440" height="1024">
+          </div>
+          <a class="city__explore-link" href="#">
+            <span class="city__explore-span">Explore</span>
+          </a>
+          <div class="city__text">
+            <h2 class="city__name">Florence</h2>
+            <h3 class="city__name">Firenze </h3>
+            <p class="city__description">The birthplace of the Renaissance</p>
+          </div>
+        </button>
+        <button href="#" class="city__link">
+          <div class="city__picture-wrapper">
+            <img class="city__picture" src="./img/rome/rome-1.jpg" alt="city rome" width=" 1440" height="1024">
+          </div>
+          <a class="city__explore-link" href="#">
+            <span class="city__explore-span">Explore</span>
+          </a>
+          <div class="city__text">
+            <h2 class="city__name">Rome</h2>
+            <h3 class="city__name">Roma</h3>
+            <p class="city__description">Rome is a oldes city in Italy</p>
+          </div>
+        </button>
+        <button href="#" class="city__link">
+          <div class="city__picture-wrapper">
+            <img class="city__picture" src="./img/milan/milan.jpg" alt="city rome" width=" 1440" height="1024">
+          </div>
+          <a class="city__explore-link" href="#">
+            <span class="city__explore-span">Explore</span>
+          </a>
+          <div class="city__text">
+            <h2 class="city__name">Milan</h2>
+            <h3 class="city__name">Milano</h3>
+            <p class="city__description">Fashion and football</p>
+          </div>
+        </button>
+        <button href="#" class="city__link">
+          <div class="city__picture-wrapper">
+            <img class="city__picture" src="./img/venice/venice-2.jpg" alt="city rome" width=" 1440" height="1024">
+          </div>
+          <a class="city__explore-link" href="#">
+            <span class="city__explore-span">Explore</span>
+          </a>
+          <div class="city__text">
+            <h2 class="city__name">Venice</h2>
+            <h3 class="city__name">Venezia</h3>
+            <p class="city__description">The Floating City</p>
+          </div>
+        </button>
+        <button href="#" class="city__link">
+          <div class="city__picture-wrapper">
+            <img class="city__picture" src="./img/pisa/pisa.jpg" alt="city rome" width=" 1440" height="1024">
+          </div>
+          <a class="city__explore-link" href="#">
+            <span class="city__explore-span">Explore</span>
+          </a>
+          <div class="city__text">
+            <h2 class="city__name">Pisa</h2>
+            <h3 class="city__name">Pisae</h3>
+            <p class="city__description">Not just a tower</p>
+          </div>
+        </button>
+      </div>
+    </section>
+
+  </main>
+  <script src="./js/main.js"></script>
 </body>
 </html>

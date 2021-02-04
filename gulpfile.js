@@ -9,6 +9,7 @@ var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
 var csso = require("gulp-csso");
 var rename = require("gulp-rename");
+var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var posthtml = require("gulp-posthtml");
 var iclude = require("posthtml-include");
@@ -29,9 +30,18 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
+gulp.task("images", function () {
+  return gulp.src("build/img/**/*.{png,jpg,svg}")
+  .pipe(imagemin([
+    imagemin.optipng({optimizationLevel: 1}),
+    imagemin.mozjpeg({quality: 75, progressive: true}),
+    ]))
+  .pipe(gulp.dest("build/img"));
+});
+
 gulp.task("webp", function () {
   return gulp.src("build/img/**/*.{png,jpg}")
-  .pipe(webp({quality: 90}))
+  .pipe(webp({quality: 75}))
   .pipe(gulp.dest("build/img"));
 });
 
@@ -91,6 +101,7 @@ gulp.task("build", gulp.series(
   "clean",
   "copy",
   "css",
+  "images",
   "webp",
   "html"
 ));
